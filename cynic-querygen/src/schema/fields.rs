@@ -194,7 +194,7 @@ fn input_type_spec_imp(
             is_subobject_with_lifetime,
         );
         return TypeSpec {
-            name: Cow::Owned(format!("Option<{}>", inner_spec.name)),
+            name: Cow::Owned(format!("cynic::MaybeUndefined<{}>", inner_spec.name)),
             contains_lifetime_a: inner_spec.contains_lifetime_a,
         };
     }
