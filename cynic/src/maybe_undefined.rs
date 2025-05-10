@@ -56,10 +56,7 @@ impl<T> From<Option<T>> for MaybeUndefined<T> {
     }
 }
 
-impl<T> Default for MaybeUndefined<T>
-where
-    T: Default,
-{
+impl<T> Default for MaybeUndefined<T> {
     fn default() -> Self {
         Self(async_graphql::MaybeUndefined::Undefined)
     }
